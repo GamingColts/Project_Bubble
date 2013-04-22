@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main sheet</name>
+    <events>
+        <variable constant="0" name="Score" sid="80" static="0" type="number">0</variable>
+        <event-group description="" sid="81" title="Player">
+            <sub-events>
+                <event-block sid="82">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="83" type="tumblr_llbx1j6vax1qg8hhm">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Start" sid="84" type="tumblr_llbx1j6vax1qg8hhm">
+                            <param id="0" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="85" title="Bubbles">
+            <sub-events>
+                <event-group collapsed="1" description="Player collision with bubbles" sid="86" title="Bubble_Collision">
+                    <sub-events>
+                        <event-block sid="87">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="88" type="tumblr_llbx1j6vax1qg8hhm">
+                                    <param id="0" name="Object">RedBubble</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="89" type="RedBubble" />
+                                <action id="0" name="Spawn another object" sid="90" type="RedBubble">
+                                    <param id="0" name="Object">RedParticle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="91">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="92" type="tumblr_llbx1j6vax1qg8hhm">
+                                    <param id="0" name="Object">YellowBubble</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="93" type="YellowBubble" />
+                                <action id="0" name="Spawn another object" sid="94" type="YellowBubble">
+                                    <param id="0" name="Object">YellowParticle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="95">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="96" type="tumblr_llbx1j6vax1qg8hhm">
+                                    <param id="0" name="Object">PurpleBubble</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="97" type="PurpleBubble" />
+                                <action id="0" name="Spawn another object" sid="98" type="PurpleBubble">
+                                    <param id="0" name="Object">PurpleParticles</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="99">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="100" type="tumblr_llbx1j6vax1qg8hhm">
+                                    <param id="0" name="Object">GreenBubble</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="101" type="GreenBubble" />
+                                <action id="0" name="Spawn another object" sid="102" type="GreenBubble">
+                                    <param id="0" name="Object">GreenParticle</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="103">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="104" type="System">
+                            <param id="0" name="Interval (seconds)">random(2.0,3.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="105" type="System">
+                            <param id="0" name="Object to create">Bluebubble1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">790</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="106" type="Bluebubble1">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="107" type="Bluebubble1">
+                            <param id="0" name="Speed">random(100,500)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="108" type="Bluebubble1">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="109">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="110" type="System">
+                                    <param id="0" name="Interval (seconds)">random(2.0,3.0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="111" type="System">
+                                    <param id="0" name="Object to create">Bluebubble2</param>
+                                    <param id="1" name="Layer">2</param>
+                                    <param id="2" name="X">random(100,1300)</param>
+                                    <param id="3" name="Y">790</param>
+                                </action>
+                                <action behavior="Sine" id="1" name="Set period" sid="112" type="Bluebubble2">
+                                    <param id="0" name="Period">random(1,4)</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="113" type="Bluebubble2">
+                                    <param id="0" name="Speed">random(100,500)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="114" type="Bluebubble2">
+                                    <param id="0" name="Scale">random(0.2,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="115">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="116" type="System">
+                                    <param id="0" name="Interval (seconds)">random(3.0,5.0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="117" type="System">
+                                    <param id="0" name="Object to create">PurpleBubble</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(100,1300)</param>
+                                    <param id="3" name="Y">790</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="118" type="PurpleBubble">
+                                    <param id="0" name="Degrees">random(1,4)</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="119" type="PurpleBubble">
+                                    <param id="0" name="Degrees">random(100,500)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="120" type="PurpleBubble">
+                                    <param id="0" name="Scale">random(0.2,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="121">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="122" type="System">
+                                    <param id="0" name="Interval (seconds)">random(5.0,10.0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="123" type="System">
+                                    <param id="0" name="Object to create">RedBubble</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(100,1300)</param>
+                                    <param id="3" name="Y">790</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="124" type="RedBubble">
+                                    <param id="0" name="Degrees">random(1,4)</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="125" type="RedBubble">
+                                    <param id="0" name="Degrees">random(100,500)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="126" type="RedBubble">
+                                    <param id="0" name="Scale">random(0.2,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="127">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="128" type="System">
+                                    <param id="0" name="Interval (seconds)">random(10.0,20.0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="129" type="System">
+                                    <param id="0" name="Object to create">GreenBubble</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(100,1300)</param>
+                                    <param id="3" name="Y">790</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="130" type="GreenBubble">
+                                    <param id="0" name="Degrees">random(1,4)</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="131" type="GreenBubble">
+                                    <param id="0" name="Degrees">random(100,500)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="132" type="GreenBubble">
+                                    <param id="0" name="Scale">random(0.2,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="133">
+                            <conditions>
+                                <condition id="-6" name="Every X seconds" sid="134" type="System">
+                                    <param id="0" name="Interval (seconds)">random(20.0,4.0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="135" type="System">
+                                    <param id="0" name="Object to create">YellowBubble</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="X">random(100,1300)</param>
+                                    <param id="3" name="Y">790</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="136" type="YellowBubble">
+                                    <param id="0" name="Degrees">random(1,4)</param>
+                                </action>
+                                <action id="-18" name="Rotate clockwise" sid="137" type="YellowBubble">
+                                    <param id="0" name="Degrees">random(100,500)</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="138" type="YellowBubble">
+                                    <param id="0" name="Scale">random(0.2,1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-group collapsed="1" description="" sid="139" title="Animation">
+                    <sub-events>
+                        <event-block sid="140">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="141" type="Bluebubble1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="142" type="Bluebubble1">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="143">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="144" type="PurpleBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="145" type="PurpleBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="146">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="147" type="GreenBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="148" type="GreenBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="149">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="150" type="RedBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="151" type="RedBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="152">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="153" type="YellowBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="154" type="YellowBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group collapsed="1" description="" sid="155" title="System">
+            <sub-events>
+                <event-block sid="156">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="157" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="158" type="tumblr_llbx1j6vax1qg8hhm">
+                            <param id="0" name="Speed">30</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="159" type="tumblr_llbx1j6vax1qg8hhm">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Bulge&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="160" type="Audio">
+                            <param id="0" name="Audio file">Music Bubble</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;MusicBubble&quot;</param>
+                        </action>
+                        <action id="31" name="Add distortion effect" sid="161" type="Audio">
+                            <param id="0" name="Tag">&quot;MusicBubble&quot;</param>
+                            <param id="1" name="Threshold">-27</param>
+                            <param id="2" name="Headroom">350</param>
+                            <param id="3" name="Drive">0</param>
+                            <param id="4" name="Make-up gain">1</param>
+                            <param id="5" name="Mix">0</param>
+                        </action>
+                        <action id="19" name="Add compressor effect" sid="162" type="Audio">
+                            <param id="0" name="Tag">&quot;MusicBubble&quot;</param>
+                            <param id="1" name="Threshold">-48</param>
+                            <param id="2" name="Knee">30</param>
+                            <param id="3" name="Ratio">100</param>
+                            <param id="4" name="Attack">3</param>
+                            <param id="5" name="Release">250</param>
+                        </action>
+                        <action id="0" name="Play" sid="163" type="Audio">
+                            <param id="0" name="Audio file">Bubble Ambience</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">100</param>
+                            <param id="1" name="Tag (optional)">&quot;BAmb&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="164">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="165" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="166" type="tumblr_llbx1j6vax1qg8hhm">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="167" type="Bluebubble1">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="168" type="Bluebubble2">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="169" type="PurpleBubble">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="170" type="GreenBubble">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="171" type="RedBubble">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="172" type="YellowBubble">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="0" name="Set text" sid="173" type="Text">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="174">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="175" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="176" type="System">
+                            <param id="0" name="Variable">Score</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

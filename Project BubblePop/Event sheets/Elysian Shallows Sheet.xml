@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Elysian Shallows Sheet</name>
+    <events>
+        <include>Bubble Sheet</include>
+        <include>System Sheet</include>
+        <include>Player sheet</include>
+        <include>HUD sheet</include>
+        <event-block sid="343">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="344" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="345" type="Audio">
+                    <param id="0" name="Audio file">Music Bubble</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;MusicBubble&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HUD sheet</name>
+    <events>
+        <event-group description="The events for the life bar" sid="322" title="Life Bar Events">
+            <sub-events>
+                <comment>Setup the life bar</comment>
+                <event-block sid="308">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="309" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="310" type="Subbar">
+                            <param id="0" name="X">Frame.X</param>
+                            <param id="1" name="Y">Frame.Y</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="310" type="Bar">
+                            <param id="0" name="X">Frame.X</param>
+                            <param id="1" name="Y">Frame.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="312" type="Bar">
+                            <param id="0" name="Instance variable">InitialWidth</param>
+                            <param id="1" name="Value">self.width</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Keep track of the life bar according to &quot;Player.Life&quot;</comment>
+                <event-block sid="313">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="314" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="315" type="Bar">
+                            <param id="0" name="Width">(Self.InitialWidth + (Player.Life-Player.MaxLife)*(Self.InitialWidth/Player.MaxLife))</param>
+                        </action>
+                        <action id="0" name="Set text" sid="173" type="Score_txt">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="332">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="333" type="Player">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="Events for the score and score modifiers" sid="323" title="Score Events">
+            <sub-events>
+                <event-block sid="313">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="314" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="173" type="Score_txt">
+                            <param id="0" name="Text">&quot;Score: &quot; &amp; Score</param>
+                        </action>
+                        <action disabled="1" id="-12" name="Subtract from" sid="331" type="Player">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">0.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

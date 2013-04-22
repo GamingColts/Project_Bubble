@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Title Sheet</name>
+    <events>
+        <event-group description="" sid="177" title="Smooth Scroll" />
+        <event-block sid="178">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="179" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Stop" sid="271" type="credits_button" />
+                <action id="5" name="Set frame" sid="270" type="credits_button">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="267">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="268" type="Mouse">
+                    <param id="0" name="Object">credits_button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="269" type="play_button">
+                    <param id="0" name="Animation">&quot;Selected&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="180" title="Buttons">
+            <sub-events>
+                <event-block sid="181">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="182" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">play_button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="404" type="Audio">
+                            <param id="0" name="Audio file">Jngle</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="405" type="Audio">
+                            <param id="0" name="Audio file">Pop-Texavery-8926_hifi</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="397" type="play_button" />
+                        <action behavior="EaseTween" id="14" name="Stop" sid="398" type="play_button">
+                            <param id="0" name="Stop Mode">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="401" type="System">
+                            <param id="0" name="Object to create">BlueParticle</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">185</param>
+                            <param id="3" name="Y">475</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="402" type="System">
+                            <param id="0" name="Seconds">1.0</param>
+                        </action>
+                        <action id="6" name="Stop" sid="403" type="Audio">
+                            <param id="0" name="Tag">&quot;Bambience&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="183" type="System">
+                            <param id="0" name="Layout">Cut Scene Level 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="399">
+                            <conditions>
+                                <condition behavior="EaseTween" id="1" name="Compare progress" sid="400" type="play_button">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Value">-0.001</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="184">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="185" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">howtoplay_button</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="187">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="188" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">credits_button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Scroll to X" sid="189" type="System">
+                            <param id="0" name="X">2198</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="190">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="191" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">back_button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Scroll to X" sid="192" type="System">
+                            <param id="0" name="X">600</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="193">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="194" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">back_button2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Scroll to Y" sid="195" type="System">
+                            <param id="0" name="Y">300</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="196">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="197" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="198" type="Audio">
+                    <param id="0" name="Audio file">Bubble Ambience</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Bambience&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

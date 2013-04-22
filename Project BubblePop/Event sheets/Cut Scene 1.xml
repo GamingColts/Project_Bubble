@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cut Scene 1</name>
+    <events>
+        <variable constant="0" name="DialogueProgress" sid="368" static="0" type="number">0</variable>
+        <event-group collapsed="1" description="" sid="365" title="Cutscene Dialogue">
+            <sub-events>
+                <event-block sid="366">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="367" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="369" type="System">
+                            <param id="0" name="Variable">DialogueProgress</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="376" type="DialogueBox" />
+                        <action id="-16" name="Set opacity" sid="377" type="DialogueText">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="379" type="Indicator">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                        <action behavior="EaseTween" id="14" name="Stop" sid="380" type="DialogueText">
+                            <param id="0" name="Stop Mode">0</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="382" type="Indicator" />
+                    </actions>
+                </event-block>
+                <event-block sid="383">
+                    <conditions>
+                        <condition behavior="EaseTween" id="1" name="Compare progress" sid="384" type="DialogueBox">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="Value">0.6</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="393" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="392" type="DialogueText">
+                            <param id="0" name="Text">Level1Scene.Get(&quot;Dialogue&quot; &amp; str(DialogueProgress))</param>
+                        </action>
+                        <action behavior="EaseTween" id="10" name="Start" sid="394" type="DialogueText" />
+                        <action id="-16" name="Set opacity" sid="395" type="Indicator">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="411">
+            <conditions>
+                <condition id="0" name="Compare text" sid="412" type="DialogueText">
+                    <param id="0" name="Text to compare">&quot;0&quot;</param>
+                    <param id="1" name="Case sensitivity">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="413" type="System">
+                    <param id="0" name="Layout">Elysian Shallows Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="373" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="389">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Add key" sid="390" type="Level1Scene">
+                            <param id="0" name="Key">&quot;Dialogue0&quot;</param>
+                            <param id="1" name="Value">&quot;Off of the shores of Elysia, a Country within LulaLand, There lived a friendly mermaid.&quot;</param>
+                        </action>
+                        <action id="0" name="Add key" sid="391" type="Level1Scene">
+                            <param id="0" name="Key">&quot;Dialogue1&quot;</param>
+                            <param id="1" name="Value">&quot;Everyone knew her as Dizzy the Mermaid.&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

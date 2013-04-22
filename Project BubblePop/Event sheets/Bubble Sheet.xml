@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bubble Sheet</name>
+    <events>
+        <event-group collapsed="1" description="" sid="341" title="Bubbles">
+            <sub-events>
+                <event-block sid="133">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="134" type="System">
+                            <param id="0" name="Interval (seconds)">random(20.0,40.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="135" type="System">
+                            <param id="0" name="Object to create">YellowBubble</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">layoutheight+8</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="136" type="YellowBubble">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="137" type="YellowBubble">
+                            <param id="0" name="Degrees">random(100,500)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="138" type="YellowBubble">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="127">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="128" type="System">
+                            <param id="0" name="Interval (seconds)">random(10.0,20.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="129" type="System">
+                            <param id="0" name="Object to create">GreenBubble</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">layoutheight+8</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="130" type="GreenBubble">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="131" type="GreenBubble">
+                            <param id="0" name="Degrees">random(100,500)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="132" type="GreenBubble">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="121">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="122" type="System">
+                            <param id="0" name="Interval (seconds)">random(5.0,10.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="123" type="System">
+                            <param id="0" name="Object to create">RedBubble</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">layoutheight+8</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="112" type="RedBubble">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="125" type="RedBubble">
+                            <param id="0" name="Degrees">random(100,500)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="126" type="RedBubble">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="115">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="116" type="System">
+                            <param id="0" name="Interval (seconds)">random(3.0,5.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="117" type="System">
+                            <param id="0" name="Object to create">PurpleBubble</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">layoutheight+8</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="118" type="PurpleBubble">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action id="-18" name="Rotate clockwise" sid="119" type="PurpleBubble">
+                            <param id="0" name="Degrees">random(100,500)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="120" type="PurpleBubble">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="103">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="104" type="System">
+                            <param id="0" name="Interval (seconds)">random(2.0,3.0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="105" type="System">
+                            <param id="0" name="Object to create">Bluebubble1</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">random(100,1300)</param>
+                            <param id="3" name="Y">layoutheight+8</param>
+                        </action>
+                        <action behavior="Sine" id="1" name="Set period" sid="106" type="Bluebubble1">
+                            <param id="0" name="Period">random(1,4)</param>
+                        </action>
+                        <action behavior="Bullet" id="0" name="Set speed" sid="107" type="Bluebubble1">
+                            <param id="0" name="Speed">random(500,1000)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="108" type="Bluebubble1">
+                            <param id="0" name="Scale">random(0.2,1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="139" title="Animation">
+                    <sub-events>
+                        <event-block sid="140">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="141" type="Bluebubble1">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="142" type="Bluebubble1">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="143">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="144" type="PurpleBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="145" type="PurpleBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="146">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="147" type="GreenBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="148" type="GreenBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="149">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="150" type="RedBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="151" type="RedBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="152">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="153" type="YellowBubble">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Start" sid="154" type="YellowBubble">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
